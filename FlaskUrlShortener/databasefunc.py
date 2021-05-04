@@ -5,7 +5,6 @@ connect('FlaskUrlShorter')
 def databaseController(shortUrl):
     total = len(Url.objects)
     a = len(Url.objects(shortedUrl__ne=shortUrl))
-    print(total,a)
     if total == a:
         return True
     else:
